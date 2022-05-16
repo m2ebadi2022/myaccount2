@@ -2,8 +2,8 @@
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="m2ebadi.myaccunt"
-	android:versionCode="1"
-	android:versionName="1"
+	android:versionCode="2"
+	android:versionName="v2"
 	android:installLocation="internalOnly">
 	
 	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="30"/>

@@ -25,11 +25,30 @@ Sub Globals
 	Private lbl_noske As Label
 	Private lbl_nameFamili As Label
 	Private lbl_email As Label
+	
+	Dim ht1 As HttpJob
+	Private lbl_phoneNum As Label
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
 	'Do not forget to load the layout file created with the visual designer. For example:
 	Activity.LoadLayout("step2")
+	
+	'File.Delete(File.DirInternal,"userAcc")
+	
+	
+	
+	If(File.Exists(File.DirInternal,"phonNum"))Then
+		Main.phon_num=File.ReadString(File.DirInternal,"phonNum")
+		http_initial_1(1)
+	Else
+		StartActivity(Main)
+		Activity.Finish
+	End If
+	
+
+
+
 
 End Sub
 
@@ -55,6 +74,85 @@ Private Sub lbl_back_Click
 End Sub
 
 Private Sub lbl_logOff_Click
+	File.Delete(File.DirInternal,"userAcc")
+	
 	StartActivity(Main)
 	Activity.Finish
 End Sub
+
+
+
+Sub http_initial_1(type1 As Int)
+
+	If(type1=1)Then
+		ht1.Initialize("ht1",Me)
+		Dim send As String
+		send = "var=3&phone="&Main.phon_num&"
+		ht1.PostString("https://taravatgroup.ir/save_acc.php",send)
+	End If
+	
+	
+	
+End Sub
+ 
+
+
+Sub Jobdone (job As HttpJob)
+	Log(job.GetString)
+	If job.Success = True Then
+		
+		If job.JobName="ht1" Then
+			If(job.GetString.Contains("nouser"))Then
+				Log ("account not exist")
+			lbl_logOff_Click
+			Else
+				
+				Dim a() As String
+				a=Regex.Split("&",job.GetString)
+			
+				lbl_nameFamili.Text=a(0)
+				lbl_email.Text=a(1)
+				
+				If(a(2)=1)Then
+					lbl_noske.Text="نسخه هدیه"
+				Else
+					lbl_noske.Text="نسخه طلایی"
+				End If
+				
+				lbl_phoneNum.Text=a(3)
+				
+				File.WriteList(File.DirInternal,"userAcc",a)
+				
+			End If
+		End If
+			
+		
+			
+		
+	Else
+		'ToastMessageShow("خطا در برقراری اتصال" , False)
+		If(File.Exists(File.DirInternal,"userAcc")=True)Then
+			
+			Dim ls_user As List
+			ls_user.Initialize
+			ls_user=File.ReadList(File.DirInternal,"userAcc")
+			
+			lbl_nameFamili.Text=ls_user.Get(0)
+			lbl_email.Text=ls_user.Get(1)
+				
+			If(ls_user.Get(2)="1")Then
+				lbl_noske.Text="نسخه هدیه"
+			Else
+				lbl_noske.Text="نسخه طلایی"
+			End If
+				
+			lbl_phoneNum.Text=ls_user.Get(3)
+			
+			
+			
+		End If
+		
+		
+	End If
+End Sub
+

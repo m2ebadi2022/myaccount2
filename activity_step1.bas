@@ -30,6 +30,8 @@ Sub Activity_Create(FirstTime As Boolean)
 	'Do not forget to load the layout file created with the visual designer. For example:
 	Activity.LoadLayout("step1")
 
+
+
 End Sub
 
 Sub Activity_Resume

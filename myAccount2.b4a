@@ -21,8 +21,8 @@ Version=11.5
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: my account
-	#VersionCode: 1
-	#VersionName: 1
+	#VersionCode: 2
+	#VersionName: v2
 	'SupportedOrientations possible values: unspecified, landscape or portrait.
 	#SupportedOrientations: unspecified
 	#CanInstallToExternalStorage: False
@@ -56,9 +56,15 @@ Sub Globals
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
-	Activity.LoadLayout("step0")
-	time_remind.Initialize("time_remind",1000)
 	
+	
+	If (File.Exists(File.DirInternal,"userAcc")=True)Then
+		StartActivity(activity_step2)
+		Activity.Finish
+	Else
+		Activity.LoadLayout("step0")
+		time_remind.Initialize("time_remind",1000)
+	End If
 	
 End Sub
 Sub time_remind_Tick
@@ -136,12 +142,15 @@ End Sub
 
 Private Sub lbl_run1_step0_Click
 	'' ارسال شماره تلفن
-	StartActivity(activity_step1)
+	'StartActivity(activity_step2) for test
+	
+	
+	
 	phon_num=et_phonNum.Text
-	'http_initial_1(1)
-'	lbl_run2_step0.Enabled=False
-'	pan_all_send.Visible=True
-'	time_remind.Enabled=True
+	http_initial_1(1)
+	lbl_run2_step0.Enabled=False
+	pan_all_send.Visible=True
+	time_remind.Enabled=True
 End Sub
 
 Private Sub lbl_run2_step0_Click
@@ -203,8 +212,13 @@ Sub Jobdone (job As HttpJob)
 			
 		If job.JobName="ht2" Then
 			If(job.GetString.Contains("okuser")=True) Then
+				File.WriteString(File.DirInternal,"phonNum",phon_num)
 				StartActivity(activity_step2)
+				
+				
 			Else if (job.GetString.Contains("nouser")=True)Then
+				
+				File.WriteString(File.DirInternal,"phonNum",phon_num)
 				StartActivity(activity_step1)
 			Else	
 				ToastMessageShow("کد تائید اشتباه است",False)	
