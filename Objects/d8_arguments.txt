@@ -1,0 +1,49 @@
+--release
+--output
+E:\b4a\b4a new projects\myAccount2\Objects
+--lib
+D:\androidsdk\platforms\android-31\android.jar
+D:\androidsdk\tools\..\extras\b4a_local\unpacked-b4ashared-63783445550000\dex_v1\b4ashared.zip
+D:\androidsdk\tools\..\extras\b4a_local\unpacked-debug-63783445550000\dex_v1\debug.zip
+D:\androidsdk\tools\..\extras\b4a_local\unpacked-core-63783445550000\dex_v1\core.zip
+D:\androidsdk\tools\..\extras\b4a_local\unpacked-phone-63783445550000\dex_v1\phone.zip
+D:\androidsdk\tools\..\extras\b4a_local\unpacked-okhttp-63783445550000\dex_v1\okhttp.zip
+D:\androidsdk\tools\..\extras\b4a_local\unpacked-stringutils-63783445550000\dex_v1\stringutils.zip
+D:\androidsdk\tools\..\extras\b4a_local\unpacked-okhttp-4.9.0-63783445550000\dex_v1\okhttp-4.9.0.zip
+D:\androidsdk\tools\..\extras\b4a_local\unpacked-okio-2.8.0-63783445550000\dex_v1\okio-2.8.0.zip
+D:\androidsdk\tools\..\extras\b4a_local\unpacked-okhttp-urlconnection-4.9.3-63783445550000\dex_v1\okhttp-urlconnection-4.9.3.zip
+D:\androidsdk\tools\..\extras\b4a_local\unpacked-kotlin-stdlib-1.6.10-63783445550000\dex_v1\kotlin-stdlib-1.6.10.zip
+D:\androidsdk\tools\..\extras\b4a_local\unpacked-remotelogger-63783445550000\dex_v1\remotelogger.zip
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\activity_step1$1.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\activity_step1$B4AMenuItemsClickListener.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\activity_step1$HandleKeyDelayed.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\activity_step1$ResumeMessage.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\activity_step1$WaitForLayout.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\activity_step1.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\activity_step2$1.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\activity_step2$B4AMenuItemsClickListener.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\activity_step2$HandleKeyDelayed.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\activity_step2$ResumeMessage.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\activity_step2$WaitForLayout.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\activity_step2.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\httpjob$_multipartfiledata.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\httpjob.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\httputils2service$1.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\httputils2service$2.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\httputils2service$httputils2service_BR.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\httputils2service.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\main$1.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\main$B4AMenuItemsClickListener.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\main$HandleKeyDelayed.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\main$ResumeMessage.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\main$WaitForLayout.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\main.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\R$drawable.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\R$style.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\R.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\starter$1.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\starter$2.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\starter$starter_BR.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\starter.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\designerscripts\LS_step0.dex
+E:\b4a\b4a new projects\myAccount2\Objects\dexed\m2ebadi\myaccunt\designerscripts\LS_step1.dex

@@ -1,0 +1,221 @@
+﻿Build1=m2ebadi,m2ebadi.myaccunt
+Build2=mahdi,m2ebadi.myaccunt
+File1=step0.bal
+File2=step1.bal
+File3=step2.bal
+FileGroup1=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+Group=Default Group
+Library1=core
+Library2=okhttputils2
+Library3=phone
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="30"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.LightTheme)~\n~'End of default text.~\n~
+Module1=activity_step1
+Module2=activity_step2
+Module3=Starter
+NumberOfFiles=3
+NumberOfLibraries=3
+NumberOfModules=3
+Version=11.5
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: my account
+	#VersionCode: 1
+	#VersionName: 1
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: True
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Dim time_remind As Timer
+	Dim phon_num As String
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	Private et_phonNum As EditText
+	Private et_code_num As EditText
+	Private pan_all_send As Panel
+	Private lbl_run2_step0 As Label
+	
+	Dim ht As HttpJob
+	
+	Private lbl_time_remind As Label
+	Dim min1 As Int=14
+	Dim sec1 As Int=59
+	
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("step0")
+	time_remind.Initialize("time_remind",1000)
+	
+	
+End Sub
+Sub time_remind_Tick
+	
+	If(min1<1 And sec1<1)Then
+		time_remind.Enabled=False
+		lbl_time_remind.Text="0:0"
+	End If
+	
+	Dim sec2 As String=sec1
+	Dim min2 As String=min1
+	Select sec2
+		Case 0
+			sec2="00"
+		Case 1
+			sec2="01"
+		Case 2
+			sec2="02"
+		Case 3
+			sec2="03"
+		Case 4
+			sec2="04"
+		Case 5
+			sec2="05"
+		Case 6
+			sec2="06"
+		Case 7
+			sec2="07"
+		Case 8
+			sec2="08"
+		Case 9
+			sec2="09"
+	End Select
+	Select min2
+		Case 0
+			min2="00"
+		Case 1
+			min2="01"
+		Case 2
+			min2="02"
+		Case 3
+			min2="03"
+		Case 4
+			min2="04"
+		Case 5
+			min2="05"
+		Case 6
+			min2="06"
+		Case 7
+			min2="07"
+		Case 8
+			min2="08"
+		Case 9
+			min2="09"
+	End Select
+	
+	lbl_time_remind.Text=min2&":"&sec2
+	
+	If(sec1<1)Then
+		min1=min1-1
+		sec1=60
+	End If
+	
+	sec1=sec1-1
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+
+Private Sub lbl_run1_step0_Click
+	'' ارسال شماره تلفن
+	StartActivity(activity_step1)
+	phon_num=et_phonNum.Text
+	'http_initial_1(1)
+'	lbl_run2_step0.Enabled=False
+'	pan_all_send.Visible=True
+'	time_remind.Enabled=True
+End Sub
+
+Private Sub lbl_run2_step0_Click
+	'' ارسال کد و چک درستی آن
+
+	http_initial_1(2)
+
+
+End Sub
+
+
+Private Sub pan_all_send_Click
+	
+End Sub
+
+Private Sub lbl_back_run1_Click
+	
+	
+	
+	
+	pan_all_send.Visible=False
+End Sub
+
+Private Sub et_code_num_TextChanged (Old As String, New As String)
+	lbl_run2_step0.Enabled=True
+End Sub
+
+
+
+Sub http_initial_1(type1 As Int)
+	
+	If(type1=1)Then
+		ht.Initialize("ht1",Me)
+		Dim send As String
+		send = "id=1&num="&phon_num&"&code=0"
+		ht.PostString("https://taravatgroup.ir/sms_req.php",send)
+		
+	Else if (type1=2)Then
+			
+		ht.Initialize("ht2",Me)
+		Dim send As String
+		send = "id=2&num="&phon_num&"&code="&et_code_num.Text
+		ht.PostString("https://taravatgroup.ir/sms_req.php",send)
+	End If
+	
+	
+	
+End Sub
+ 
+
+
+Sub Jobdone (job As HttpJob)
+	If job.Success = True Then
+		Log(job.GetString)
+		If job.JobName="ht1" Then
+		
+				
+		End If	
+			
+		If job.JobName="ht2" Then
+			If(job.GetString.Contains("okuser")=True) Then
+				StartActivity(activity_step2)
+			Else if (job.GetString.Contains("nouser")=True)Then
+				StartActivity(activity_step1)
+			Else	
+				ToastMessageShow("کد تائید اشتباه است",False)	
+			End If
+			
+		End If
+			
+		
+	Else
+		'ToastMessageShow("خطا در برقراری اتصال" , False)
+	End If
+End Sub
+
+
