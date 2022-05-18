@@ -136,7 +136,7 @@ Sub Jobdone (job As HttpJob)
 			Dim ls_user As List
 			ls_user.Initialize
 			ls_user=File.ReadList(File.DirInternal,"userAcc")
-			
+			Log(1)
 			lbl_nameFamili.Text=ls_user.Get(0)
 			lbl_email.Text=ls_user.Get(1)
 				
