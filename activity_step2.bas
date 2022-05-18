@@ -67,6 +67,7 @@ End Sub
 
 Private Sub lbl_save_edit_Click
 	
+	http_initial_1(2)
 End Sub
 
 Private Sub lbl_back_Click
@@ -89,7 +90,12 @@ Sub http_initial_1(type1 As Int)
 		Dim send As String
 		send = "var=3&phone="&Main.phon_num&"
 		ht1.PostString("https://taravatgroup.ir/save_acc.php",send)
-	End If
+	Else If(type1=2)Then ' to edit
+		ht1.Initialize("ht2",Me)
+		Dim send As String
+		send = "var=2&name="&et_nameFamili.Text&"&email="&et_email.Text&"&phone="&Main.phon_num&"
+		ht1.PostString("https://taravatgroup.ir/save_acc.php",send)
+	End If	
 	
 	
 	
@@ -126,7 +132,13 @@ Sub Jobdone (job As HttpJob)
 			End If
 		End If
 			
-		
+		If job.JobName="ht2" Then
+			If(job.GetString.Contains("true"))Then
+				http_initial_1(1)
+				lbl_back_Click
+				ToastMessageShow("تغییرات ذخیره شد",False)
+			End If
+		End If
 			
 		
 	Else
@@ -156,3 +168,11 @@ Sub Jobdone (job As HttpJob)
 	End If
 End Sub
 
+
+
+Private Sub lbl_edit_Click
+	et_nameFamili.Text=	lbl_nameFamili.Text
+	et_email.Text=lbl_email.Text
+	
+	pan_all_edit.Visible=True
+End Sub

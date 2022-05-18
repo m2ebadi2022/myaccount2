@@ -224,8 +224,8 @@ activity_step2,activity_create,1,0,27,47
 ,et_email,,et_namefamili,,lbl_email,,lbl_namefamili,,lbl_noske,,lbl_phonenum,,pan_all_edit,main,phon_num,,ht1
 ,et_email,,et_namefamili,,lbl_email,,lbl_namefamili,,lbl_noske,,lbl_phonenum,,pan_all_edit,main,phon_num
 ,http_initial_1,httpjob,initialize,httpjob,poststring,httpjob,postbytes,httpjob,addscheme
-activity_step2,http_initial_1,0,0,79,90
-,ht1,main,phon_num
+activity_step2,http_initial_1,0,1,80,96
+,ht1,main,phon_num,,et_namefamili,,et_email
 
 httpjob,initialize,httpjob,poststring,httpjob,postbytes,httpjob,addscheme
 activity_step2,activity_pause,0,0,53,55
@@ -240,22 +240,26 @@ activity_step2,globals,0,1,12,25
 
 
 
-activity_step2,jobdone,0,0,94,151
-,lbl_namefamili,,lbl_email,,lbl_noske,,lbl_phonenum,httputils2service,tempfolder
+activity_step2,jobdone,0,1,100,163
+,lbl_namefamili,,lbl_email,,lbl_noske,,lbl_phonenum,httputils2service,tempfolder,,ht1,main,phon_num,,et_namefamili,,et_email,,pan_all_edit
 
-httpjob,getstring,,lbl_logoff_click,httpjob,getstring2
-activity_step2,lbl_logoff_click,0,0,70,75
+httpjob,getstring,,lbl_logoff_click,,http_initial_1,,lbl_back_click,httpjob,getstring2,httpjob,initialize,httpjob,poststring,httpjob,postbytes,httpjob,addscheme
+activity_step2,lbl_logoff_click,0,0,71,76
 
 
 
-activity_step2,lbl_back_click,0,0,66,68
+activity_step2,lbl_back_click,0,0,67,69
 ,pan_all_edit
 
 
-activity_step2,lbl_save_edit_click,0,0,62,64
+activity_step2,lbl_edit_click,1,1,167,172
+,et_namefamili,,lbl_namefamili,,et_email,,lbl_email,,pan_all_edit
 
 
+activity_step2,lbl_save_edit_click,0,1,62,65
+,ht1,main,phon_num,,et_namefamili,,et_email
 
+,http_initial_1,httpjob,initialize,httpjob,poststring,httpjob,postbytes,httpjob,addscheme
 activity_step2,pan_all_edit_click,0,0,58,60
 
 
