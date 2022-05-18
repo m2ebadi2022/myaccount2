@@ -361,30 +361,30 @@ public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="activity_step2";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=1900544;
- //BA.debugLineNum = 1900544;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=1900546;
- //BA.debugLineNum = 1900546;BA.debugLine="Activity.LoadLayout(\"step2\")";
+RDebugUtils.currentLine=1376256;
+ //BA.debugLineNum = 1376256;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=1376258;
+ //BA.debugLineNum = 1376258;BA.debugLine="Activity.LoadLayout(\"step2\")";
 mostCurrent._activity.LoadLayout("step2",mostCurrent.activityBA);
-RDebugUtils.currentLine=1900552;
- //BA.debugLineNum = 1900552;BA.debugLine="If(File.Exists(File.DirInternal,\"phonNum\"))Then";
+RDebugUtils.currentLine=1376264;
+ //BA.debugLineNum = 1376264;BA.debugLine="If(File.Exists(File.DirInternal,\"phonNum\"))Then";
 if ((anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"phonNum"))) { 
-RDebugUtils.currentLine=1900553;
- //BA.debugLineNum = 1900553;BA.debugLine="Main.phon_num=File.ReadString(File.DirInternal,\"";
+RDebugUtils.currentLine=1376265;
+ //BA.debugLineNum = 1376265;BA.debugLine="Main.phon_num=File.ReadString(File.DirInternal,\"";
 mostCurrent._main._phon_num /*String*/  = anywheresoftware.b4a.keywords.Common.File.ReadString(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"phonNum");
-RDebugUtils.currentLine=1900554;
- //BA.debugLineNum = 1900554;BA.debugLine="http_initial_1(1)";
+RDebugUtils.currentLine=1376266;
+ //BA.debugLineNum = 1376266;BA.debugLine="http_initial_1(1)";
 _http_initial_1((int) (1));
  }else {
-RDebugUtils.currentLine=1900556;
- //BA.debugLineNum = 1900556;BA.debugLine="StartActivity(Main)";
+RDebugUtils.currentLine=1376268;
+ //BA.debugLineNum = 1376268;BA.debugLine="StartActivity(Main)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._main.getObject()));
-RDebugUtils.currentLine=1900557;
- //BA.debugLineNum = 1900557;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=1376269;
+ //BA.debugLineNum = 1376269;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
  };
-RDebugUtils.currentLine=1900564;
- //BA.debugLineNum = 1900564;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1376276;
+ //BA.debugLineNum = 1376276;BA.debugLine="End Sub";
 return "";
 }
 public static String  _http_initial_1(int _type1) throws Exception{
@@ -392,61 +392,61 @@ RDebugUtils.currentModule="activity_step2";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "http_initial_1", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "http_initial_1", new Object[] {_type1}));}
 String _send = "";
-RDebugUtils.currentLine=2359296;
- //BA.debugLineNum = 2359296;BA.debugLine="Sub http_initial_1(type1 As Int)";
-RDebugUtils.currentLine=2359298;
- //BA.debugLineNum = 2359298;BA.debugLine="If(type1=1)Then";
+RDebugUtils.currentLine=4718592;
+ //BA.debugLineNum = 4718592;BA.debugLine="Sub http_initial_1(type1 As Int)";
+RDebugUtils.currentLine=4718594;
+ //BA.debugLineNum = 4718594;BA.debugLine="If(type1=1)Then";
 if ((_type1==1)) { 
-RDebugUtils.currentLine=2359299;
- //BA.debugLineNum = 2359299;BA.debugLine="ht1.Initialize(\"ht1\",Me)";
+RDebugUtils.currentLine=4718595;
+ //BA.debugLineNum = 4718595;BA.debugLine="ht1.Initialize(\"ht1\",Me)";
 mostCurrent._ht1._initialize /*String*/ (null,processBA,"ht1",activity_step2.getObject());
-RDebugUtils.currentLine=2359300;
- //BA.debugLineNum = 2359300;BA.debugLine="Dim send As String";
+RDebugUtils.currentLine=4718596;
+ //BA.debugLineNum = 4718596;BA.debugLine="Dim send As String";
 _send = "";
-RDebugUtils.currentLine=2359301;
- //BA.debugLineNum = 2359301;BA.debugLine="send = \"var=3&phone=\"&Main.phon_num&\"";
+RDebugUtils.currentLine=4718597;
+ //BA.debugLineNum = 4718597;BA.debugLine="send = \"var=3&phone=\"&Main.phon_num&\"";
 _send = "var=3&phone="+mostCurrent._main._phon_num /*String*/ +"";
-RDebugUtils.currentLine=2359302;
- //BA.debugLineNum = 2359302;BA.debugLine="ht1.PostString(\"https://taravatgroup.ir/save_acc";
+RDebugUtils.currentLine=4718598;
+ //BA.debugLineNum = 4718598;BA.debugLine="ht1.PostString(\"https://taravatgroup.ir/save_acc";
 mostCurrent._ht1._poststring /*String*/ (null,"https://taravatgroup.ir/save_acc.php",_send);
  }else 
-{RDebugUtils.currentLine=2359303;
- //BA.debugLineNum = 2359303;BA.debugLine="Else If(type1=2)Then ' to edit";
+{RDebugUtils.currentLine=4718599;
+ //BA.debugLineNum = 4718599;BA.debugLine="Else If(type1=2)Then ' to edit";
 if ((_type1==2)) { 
-RDebugUtils.currentLine=2359304;
- //BA.debugLineNum = 2359304;BA.debugLine="ht1.Initialize(\"ht2\",Me)";
+RDebugUtils.currentLine=4718600;
+ //BA.debugLineNum = 4718600;BA.debugLine="ht1.Initialize(\"ht2\",Me)";
 mostCurrent._ht1._initialize /*String*/ (null,processBA,"ht2",activity_step2.getObject());
-RDebugUtils.currentLine=2359305;
- //BA.debugLineNum = 2359305;BA.debugLine="Dim send As String";
+RDebugUtils.currentLine=4718601;
+ //BA.debugLineNum = 4718601;BA.debugLine="Dim send As String";
 _send = "";
-RDebugUtils.currentLine=2359306;
- //BA.debugLineNum = 2359306;BA.debugLine="send = \"var=2&name=\"&et_nameFamili.Text&\"&email=";
+RDebugUtils.currentLine=4718602;
+ //BA.debugLineNum = 4718602;BA.debugLine="send = \"var=2&name=\"&et_nameFamili.Text&\"&email=";
 _send = "var=2&name="+mostCurrent._et_namefamili.getText()+"&email="+mostCurrent._et_email.getText()+"&phone="+mostCurrent._main._phon_num /*String*/ +"";
-RDebugUtils.currentLine=2359307;
- //BA.debugLineNum = 2359307;BA.debugLine="ht1.PostString(\"https://taravatgroup.ir/save_acc";
+RDebugUtils.currentLine=4718603;
+ //BA.debugLineNum = 4718603;BA.debugLine="ht1.PostString(\"https://taravatgroup.ir/save_acc";
 mostCurrent._ht1._poststring /*String*/ (null,"https://taravatgroup.ir/save_acc.php",_send);
  }}
 ;
-RDebugUtils.currentLine=2359312;
- //BA.debugLineNum = 2359312;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4718608;
+ //BA.debugLineNum = 4718608;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="activity_step2";
-RDebugUtils.currentLine=2031616;
- //BA.debugLineNum = 2031616;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=2031618;
- //BA.debugLineNum = 2031618;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1507328;
+ //BA.debugLineNum = 1507328;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=1507330;
+ //BA.debugLineNum = 1507330;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="activity_step2";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=1966080;
- //BA.debugLineNum = 1966080;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=1966082;
- //BA.debugLineNum = 1966082;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1441792;
+ //BA.debugLineNum = 1441792;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=1441794;
+ //BA.debugLineNum = 1441794;BA.debugLine="End Sub";
 return "";
 }
 public static String  _jobdone(m2ebadi.myaccunt.httpjob _job) throws Exception{
@@ -455,187 +455,187 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "jobdone", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "jobdone", new Object[] {_job}));}
 String[] _a = null;
 anywheresoftware.b4a.objects.collections.List _ls_user = null;
-RDebugUtils.currentLine=2424832;
- //BA.debugLineNum = 2424832;BA.debugLine="Sub Jobdone (job As HttpJob)";
-RDebugUtils.currentLine=2424833;
- //BA.debugLineNum = 2424833;BA.debugLine="Log(job.GetString)";
-anywheresoftware.b4a.keywords.Common.LogImpl("62424833",_job._getstring /*String*/ (null),0);
-RDebugUtils.currentLine=2424834;
- //BA.debugLineNum = 2424834;BA.debugLine="If job.Success = True Then";
+RDebugUtils.currentLine=4784128;
+ //BA.debugLineNum = 4784128;BA.debugLine="Sub Jobdone (job As HttpJob)";
+RDebugUtils.currentLine=4784129;
+ //BA.debugLineNum = 4784129;BA.debugLine="Log(job.GetString)";
+anywheresoftware.b4a.keywords.Common.LogImpl("44784129",_job._getstring /*String*/ (null),0);
+RDebugUtils.currentLine=4784130;
+ //BA.debugLineNum = 4784130;BA.debugLine="If job.Success = True Then";
 if (_job._success /*boolean*/ ==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=2424836;
- //BA.debugLineNum = 2424836;BA.debugLine="If job.JobName=\"ht1\" Then";
+RDebugUtils.currentLine=4784132;
+ //BA.debugLineNum = 4784132;BA.debugLine="If job.JobName=\"ht1\" Then";
 if ((_job._jobname /*String*/ ).equals("ht1")) { 
-RDebugUtils.currentLine=2424837;
- //BA.debugLineNum = 2424837;BA.debugLine="If(job.GetString.Contains(\"nouser\"))Then";
+RDebugUtils.currentLine=4784133;
+ //BA.debugLineNum = 4784133;BA.debugLine="If(job.GetString.Contains(\"nouser\"))Then";
 if ((_job._getstring /*String*/ (null).contains("nouser"))) { 
-RDebugUtils.currentLine=2424838;
- //BA.debugLineNum = 2424838;BA.debugLine="Log (\"account not exist\")";
-anywheresoftware.b4a.keywords.Common.LogImpl("62424838","account not exist",0);
-RDebugUtils.currentLine=2424839;
- //BA.debugLineNum = 2424839;BA.debugLine="lbl_logOff_Click";
+RDebugUtils.currentLine=4784134;
+ //BA.debugLineNum = 4784134;BA.debugLine="Log (\"account not exist\")";
+anywheresoftware.b4a.keywords.Common.LogImpl("44784134","account not exist",0);
+RDebugUtils.currentLine=4784135;
+ //BA.debugLineNum = 4784135;BA.debugLine="lbl_logOff_Click";
 _lbl_logoff_click();
  }else {
-RDebugUtils.currentLine=2424842;
- //BA.debugLineNum = 2424842;BA.debugLine="Dim a() As String";
+RDebugUtils.currentLine=4784138;
+ //BA.debugLineNum = 4784138;BA.debugLine="Dim a() As String";
 _a = new String[(int) (0)];
 java.util.Arrays.fill(_a,"");
-RDebugUtils.currentLine=2424843;
- //BA.debugLineNum = 2424843;BA.debugLine="a=Regex.Split(\"&\",job.GetString)";
+RDebugUtils.currentLine=4784139;
+ //BA.debugLineNum = 4784139;BA.debugLine="a=Regex.Split(\"&\",job.GetString)";
 _a = anywheresoftware.b4a.keywords.Common.Regex.Split("&",_job._getstring /*String*/ (null));
-RDebugUtils.currentLine=2424845;
- //BA.debugLineNum = 2424845;BA.debugLine="lbl_nameFamili.Text=a(0)";
+RDebugUtils.currentLine=4784141;
+ //BA.debugLineNum = 4784141;BA.debugLine="lbl_nameFamili.Text=a(0)";
 mostCurrent._lbl_namefamili.setText(BA.ObjectToCharSequence(_a[(int) (0)]));
-RDebugUtils.currentLine=2424846;
- //BA.debugLineNum = 2424846;BA.debugLine="lbl_email.Text=a(1)";
+RDebugUtils.currentLine=4784142;
+ //BA.debugLineNum = 4784142;BA.debugLine="lbl_email.Text=a(1)";
 mostCurrent._lbl_email.setText(BA.ObjectToCharSequence(_a[(int) (1)]));
-RDebugUtils.currentLine=2424848;
- //BA.debugLineNum = 2424848;BA.debugLine="If(a(2)=1)Then";
+RDebugUtils.currentLine=4784144;
+ //BA.debugLineNum = 4784144;BA.debugLine="If(a(2)=1)Then";
 if (((_a[(int) (2)]).equals(BA.NumberToString(1)))) { 
-RDebugUtils.currentLine=2424849;
- //BA.debugLineNum = 2424849;BA.debugLine="lbl_noske.Text=\"نسخه هدیه\"";
+RDebugUtils.currentLine=4784145;
+ //BA.debugLineNum = 4784145;BA.debugLine="lbl_noske.Text=\"نسخه هدیه\"";
 mostCurrent._lbl_noske.setText(BA.ObjectToCharSequence("نسخه هدیه"));
  }else {
-RDebugUtils.currentLine=2424851;
- //BA.debugLineNum = 2424851;BA.debugLine="lbl_noske.Text=\"نسخه طلایی\"";
+RDebugUtils.currentLine=4784147;
+ //BA.debugLineNum = 4784147;BA.debugLine="lbl_noske.Text=\"نسخه طلایی\"";
 mostCurrent._lbl_noske.setText(BA.ObjectToCharSequence("نسخه طلایی"));
  };
-RDebugUtils.currentLine=2424854;
- //BA.debugLineNum = 2424854;BA.debugLine="lbl_phoneNum.Text=a(3)";
+RDebugUtils.currentLine=4784150;
+ //BA.debugLineNum = 4784150;BA.debugLine="lbl_phoneNum.Text=a(3)";
 mostCurrent._lbl_phonenum.setText(BA.ObjectToCharSequence(_a[(int) (3)]));
-RDebugUtils.currentLine=2424856;
- //BA.debugLineNum = 2424856;BA.debugLine="File.WriteList(File.DirInternal,\"userAcc\",a)";
+RDebugUtils.currentLine=4784152;
+ //BA.debugLineNum = 4784152;BA.debugLine="File.WriteList(File.DirInternal,\"userAcc\",a)";
 anywheresoftware.b4a.keywords.Common.File.WriteList(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"userAcc",anywheresoftware.b4a.keywords.Common.ArrayToList(_a));
  };
  };
-RDebugUtils.currentLine=2424861;
- //BA.debugLineNum = 2424861;BA.debugLine="If job.JobName=\"ht2\" Then";
+RDebugUtils.currentLine=4784157;
+ //BA.debugLineNum = 4784157;BA.debugLine="If job.JobName=\"ht2\" Then";
 if ((_job._jobname /*String*/ ).equals("ht2")) { 
-RDebugUtils.currentLine=2424862;
- //BA.debugLineNum = 2424862;BA.debugLine="If(job.GetString.Contains(\"true\"))Then";
+RDebugUtils.currentLine=4784158;
+ //BA.debugLineNum = 4784158;BA.debugLine="If(job.GetString.Contains(\"true\"))Then";
 if ((_job._getstring /*String*/ (null).contains("true"))) { 
-RDebugUtils.currentLine=2424863;
- //BA.debugLineNum = 2424863;BA.debugLine="http_initial_1(1)";
+RDebugUtils.currentLine=4784159;
+ //BA.debugLineNum = 4784159;BA.debugLine="http_initial_1(1)";
 _http_initial_1((int) (1));
-RDebugUtils.currentLine=2424864;
- //BA.debugLineNum = 2424864;BA.debugLine="lbl_back_Click";
+RDebugUtils.currentLine=4784160;
+ //BA.debugLineNum = 4784160;BA.debugLine="lbl_back_Click";
 _lbl_back_click();
-RDebugUtils.currentLine=2424865;
- //BA.debugLineNum = 2424865;BA.debugLine="ToastMessageShow(\"تغییرات ذخیره شد\",False)";
+RDebugUtils.currentLine=4784161;
+ //BA.debugLineNum = 4784161;BA.debugLine="ToastMessageShow(\"تغییرات ذخیره شد\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("تغییرات ذخیره شد"),anywheresoftware.b4a.keywords.Common.False);
  };
  };
  }else {
-RDebugUtils.currentLine=2424872;
- //BA.debugLineNum = 2424872;BA.debugLine="If(File.Exists(File.DirInternal,\"userAcc\")=True)";
+RDebugUtils.currentLine=4784168;
+ //BA.debugLineNum = 4784168;BA.debugLine="If(File.Exists(File.DirInternal,\"userAcc\")=True)";
 if ((anywheresoftware.b4a.keywords.Common.File.Exists(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"userAcc")==anywheresoftware.b4a.keywords.Common.True)) { 
-RDebugUtils.currentLine=2424874;
- //BA.debugLineNum = 2424874;BA.debugLine="Dim ls_user As List";
+RDebugUtils.currentLine=4784170;
+ //BA.debugLineNum = 4784170;BA.debugLine="Dim ls_user As List";
 _ls_user = new anywheresoftware.b4a.objects.collections.List();
-RDebugUtils.currentLine=2424875;
- //BA.debugLineNum = 2424875;BA.debugLine="ls_user.Initialize";
+RDebugUtils.currentLine=4784171;
+ //BA.debugLineNum = 4784171;BA.debugLine="ls_user.Initialize";
 _ls_user.Initialize();
-RDebugUtils.currentLine=2424876;
- //BA.debugLineNum = 2424876;BA.debugLine="ls_user=File.ReadList(File.DirInternal,\"userAcc";
+RDebugUtils.currentLine=4784172;
+ //BA.debugLineNum = 4784172;BA.debugLine="ls_user=File.ReadList(File.DirInternal,\"userAcc";
 _ls_user = anywheresoftware.b4a.keywords.Common.File.ReadList(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"userAcc");
-RDebugUtils.currentLine=2424878;
- //BA.debugLineNum = 2424878;BA.debugLine="lbl_nameFamili.Text=ls_user.Get(0)";
+RDebugUtils.currentLine=4784174;
+ //BA.debugLineNum = 4784174;BA.debugLine="lbl_nameFamili.Text=ls_user.Get(0)";
 mostCurrent._lbl_namefamili.setText(BA.ObjectToCharSequence(_ls_user.Get((int) (0))));
-RDebugUtils.currentLine=2424879;
- //BA.debugLineNum = 2424879;BA.debugLine="lbl_email.Text=ls_user.Get(1)";
+RDebugUtils.currentLine=4784175;
+ //BA.debugLineNum = 4784175;BA.debugLine="lbl_email.Text=ls_user.Get(1)";
 mostCurrent._lbl_email.setText(BA.ObjectToCharSequence(_ls_user.Get((int) (1))));
-RDebugUtils.currentLine=2424881;
- //BA.debugLineNum = 2424881;BA.debugLine="If(ls_user.Get(2)=\"1\")Then";
+RDebugUtils.currentLine=4784177;
+ //BA.debugLineNum = 4784177;BA.debugLine="If(ls_user.Get(2)=\"1\")Then";
 if (((_ls_user.Get((int) (2))).equals((Object)("1")))) { 
-RDebugUtils.currentLine=2424882;
- //BA.debugLineNum = 2424882;BA.debugLine="lbl_noske.Text=\"نسخه هدیه\"";
+RDebugUtils.currentLine=4784178;
+ //BA.debugLineNum = 4784178;BA.debugLine="lbl_noske.Text=\"نسخه هدیه\"";
 mostCurrent._lbl_noske.setText(BA.ObjectToCharSequence("نسخه هدیه"));
  }else {
-RDebugUtils.currentLine=2424884;
- //BA.debugLineNum = 2424884;BA.debugLine="lbl_noske.Text=\"نسخه طلایی\"";
+RDebugUtils.currentLine=4784180;
+ //BA.debugLineNum = 4784180;BA.debugLine="lbl_noske.Text=\"نسخه طلایی\"";
 mostCurrent._lbl_noske.setText(BA.ObjectToCharSequence("نسخه طلایی"));
  };
-RDebugUtils.currentLine=2424887;
- //BA.debugLineNum = 2424887;BA.debugLine="lbl_phoneNum.Text=ls_user.Get(3)";
+RDebugUtils.currentLine=4784183;
+ //BA.debugLineNum = 4784183;BA.debugLine="lbl_phoneNum.Text=ls_user.Get(3)";
 mostCurrent._lbl_phonenum.setText(BA.ObjectToCharSequence(_ls_user.Get((int) (3))));
  };
  };
-RDebugUtils.currentLine=2424895;
- //BA.debugLineNum = 2424895;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4784191;
+ //BA.debugLineNum = 4784191;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lbl_logoff_click() throws Exception{
 RDebugUtils.currentModule="activity_step2";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_logoff_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_logoff_click", null));}
-RDebugUtils.currentLine=2293760;
- //BA.debugLineNum = 2293760;BA.debugLine="Private Sub lbl_logOff_Click";
-RDebugUtils.currentLine=2293761;
- //BA.debugLineNum = 2293761;BA.debugLine="File.Delete(File.DirInternal,\"userAcc\")";
+RDebugUtils.currentLine=4653056;
+ //BA.debugLineNum = 4653056;BA.debugLine="Private Sub lbl_logOff_Click";
+RDebugUtils.currentLine=4653057;
+ //BA.debugLineNum = 4653057;BA.debugLine="File.Delete(File.DirInternal,\"userAcc\")";
 anywheresoftware.b4a.keywords.Common.File.Delete(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"userAcc");
-RDebugUtils.currentLine=2293763;
- //BA.debugLineNum = 2293763;BA.debugLine="StartActivity(Main)";
+RDebugUtils.currentLine=4653059;
+ //BA.debugLineNum = 4653059;BA.debugLine="StartActivity(Main)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._main.getObject()));
-RDebugUtils.currentLine=2293764;
- //BA.debugLineNum = 2293764;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=4653060;
+ //BA.debugLineNum = 4653060;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=2293765;
- //BA.debugLineNum = 2293765;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4653061;
+ //BA.debugLineNum = 4653061;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lbl_back_click() throws Exception{
 RDebugUtils.currentModule="activity_step2";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_back_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_back_click", null));}
-RDebugUtils.currentLine=2228224;
- //BA.debugLineNum = 2228224;BA.debugLine="Private Sub lbl_back_Click";
-RDebugUtils.currentLine=2228225;
- //BA.debugLineNum = 2228225;BA.debugLine="pan_all_edit.Visible=False";
+RDebugUtils.currentLine=4587520;
+ //BA.debugLineNum = 4587520;BA.debugLine="Private Sub lbl_back_Click";
+RDebugUtils.currentLine=4587521;
+ //BA.debugLineNum = 4587521;BA.debugLine="pan_all_edit.Visible=False";
 mostCurrent._pan_all_edit.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=2228226;
- //BA.debugLineNum = 2228226;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4587522;
+ //BA.debugLineNum = 4587522;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lbl_edit_click() throws Exception{
 RDebugUtils.currentModule="activity_step2";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_edit_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_edit_click", null));}
-RDebugUtils.currentLine=4915200;
- //BA.debugLineNum = 4915200;BA.debugLine="Private Sub lbl_edit_Click";
-RDebugUtils.currentLine=4915201;
- //BA.debugLineNum = 4915201;BA.debugLine="et_nameFamili.Text=	lbl_nameFamili.Text";
+RDebugUtils.currentLine=4849664;
+ //BA.debugLineNum = 4849664;BA.debugLine="Private Sub lbl_edit_Click";
+RDebugUtils.currentLine=4849665;
+ //BA.debugLineNum = 4849665;BA.debugLine="et_nameFamili.Text=	lbl_nameFamili.Text";
 mostCurrent._et_namefamili.setText(BA.ObjectToCharSequence(mostCurrent._lbl_namefamili.getText()));
-RDebugUtils.currentLine=4915202;
- //BA.debugLineNum = 4915202;BA.debugLine="et_email.Text=lbl_email.Text";
+RDebugUtils.currentLine=4849666;
+ //BA.debugLineNum = 4849666;BA.debugLine="et_email.Text=lbl_email.Text";
 mostCurrent._et_email.setText(BA.ObjectToCharSequence(mostCurrent._lbl_email.getText()));
-RDebugUtils.currentLine=4915204;
- //BA.debugLineNum = 4915204;BA.debugLine="pan_all_edit.Visible=True";
+RDebugUtils.currentLine=4849668;
+ //BA.debugLineNum = 4849668;BA.debugLine="pan_all_edit.Visible=True";
 mostCurrent._pan_all_edit.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=4915205;
- //BA.debugLineNum = 4915205;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4849669;
+ //BA.debugLineNum = 4849669;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lbl_save_edit_click() throws Exception{
 RDebugUtils.currentModule="activity_step2";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_save_edit_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_save_edit_click", null));}
-RDebugUtils.currentLine=2162688;
- //BA.debugLineNum = 2162688;BA.debugLine="Private Sub lbl_save_edit_Click";
-RDebugUtils.currentLine=2162690;
- //BA.debugLineNum = 2162690;BA.debugLine="http_initial_1(2)";
+RDebugUtils.currentLine=4521984;
+ //BA.debugLineNum = 4521984;BA.debugLine="Private Sub lbl_save_edit_Click";
+RDebugUtils.currentLine=4521986;
+ //BA.debugLineNum = 4521986;BA.debugLine="http_initial_1(2)";
 _http_initial_1((int) (2));
-RDebugUtils.currentLine=2162691;
- //BA.debugLineNum = 2162691;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4521987;
+ //BA.debugLineNum = 4521987;BA.debugLine="End Sub";
 return "";
 }
 public static String  _pan_all_edit_click() throws Exception{
 RDebugUtils.currentModule="activity_step2";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "pan_all_edit_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "pan_all_edit_click", null));}
-RDebugUtils.currentLine=2097152;
- //BA.debugLineNum = 2097152;BA.debugLine="Private Sub pan_all_edit_Click";
-RDebugUtils.currentLine=2097154;
- //BA.debugLineNum = 2097154;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4456448;
+ //BA.debugLineNum = 4456448;BA.debugLine="Private Sub pan_all_edit_Click";
+RDebugUtils.currentLine=4456450;
+ //BA.debugLineNum = 4456450;BA.debugLine="End Sub";
 return "";
 }
 }

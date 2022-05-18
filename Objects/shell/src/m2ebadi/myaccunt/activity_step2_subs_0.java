@@ -159,7 +159,7 @@ Debug.locals.put("job", _job);
 Debug.ShouldStop(8);
  BA.debugLineNum = 101;BA.debugLine="Log(job.GetString)";
 Debug.ShouldStop(16);
-activity_step2.mostCurrent.__c.runVoidMethod ("LogImpl","62424833",_job.runClassMethod (m2ebadi.myaccunt.httpjob.class, "_getstring" /*RemoteObject*/ ),0);
+activity_step2.mostCurrent.__c.runVoidMethod ("LogImpl","44784129",_job.runClassMethod (m2ebadi.myaccunt.httpjob.class, "_getstring" /*RemoteObject*/ ),0);
  BA.debugLineNum = 102;BA.debugLine="If job.Success = True Then";
 Debug.ShouldStop(32);
 if (RemoteObject.solveBoolean("=",_job.getField(true,"_success" /*RemoteObject*/ ),activity_step2.mostCurrent.__c.getField(true,"True"))) { 
@@ -171,7 +171,7 @@ Debug.ShouldStop(256);
 if ((_job.runClassMethod (m2ebadi.myaccunt.httpjob.class, "_getstring" /*RemoteObject*/ ).runMethod(true,"contains",(Object)(RemoteObject.createImmutable("nouser")))).<Boolean>get().booleanValue()) { 
  BA.debugLineNum = 106;BA.debugLine="Log (\"account not exist\")";
 Debug.ShouldStop(512);
-activity_step2.mostCurrent.__c.runVoidMethod ("LogImpl","62424838",RemoteObject.createImmutable("account not exist"),0);
+activity_step2.mostCurrent.__c.runVoidMethod ("LogImpl","44784134",RemoteObject.createImmutable("account not exist"),0);
  BA.debugLineNum = 107;BA.debugLine="lbl_logOff_Click";
 Debug.ShouldStop(1024);
 _lbl_logoff_click();

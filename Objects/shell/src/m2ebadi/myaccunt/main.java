@@ -65,11 +65,12 @@ public static RemoteObject _ht = RemoteObject.declareNull("m2ebadi.myaccunt.http
 public static RemoteObject _lbl_time_remind = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static RemoteObject _min1 = RemoteObject.createImmutable(0);
 public static RemoteObject _sec1 = RemoteObject.createImmutable(0);
+public static RemoteObject _lbl_run1_step0 = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static m2ebadi.myaccunt.starter _starter = null;
 public static m2ebadi.myaccunt.activity_step1 _activity_step1 = null;
 public static m2ebadi.myaccunt.activity_step2 _activity_step2 = null;
 public static m2ebadi.myaccunt.httputils2service _httputils2service = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",main.mostCurrent._activity,"activity_step1",Debug.moduleToString(m2ebadi.myaccunt.activity_step1.class),"activity_step2",Debug.moduleToString(m2ebadi.myaccunt.activity_step2.class),"et_code_num",main.mostCurrent._et_code_num,"et_phonNum",main.mostCurrent._et_phonnum,"ht",main.mostCurrent._ht,"HttpUtils2Service",Debug.moduleToString(m2ebadi.myaccunt.httputils2service.class),"lbl_run2_step0",main.mostCurrent._lbl_run2_step0,"lbl_time_remind",main.mostCurrent._lbl_time_remind,"min1",main._min1,"pan_all_send",main.mostCurrent._pan_all_send,"phon_num",main._phon_num,"sec1",main._sec1,"Starter",Debug.moduleToString(m2ebadi.myaccunt.starter.class),"time_remind",main._time_remind};
+		return new Object[] {"Activity",main.mostCurrent._activity,"activity_step1",Debug.moduleToString(m2ebadi.myaccunt.activity_step1.class),"activity_step2",Debug.moduleToString(m2ebadi.myaccunt.activity_step2.class),"et_code_num",main.mostCurrent._et_code_num,"et_phonNum",main.mostCurrent._et_phonnum,"ht",main.mostCurrent._ht,"HttpUtils2Service",Debug.moduleToString(m2ebadi.myaccunt.httputils2service.class),"lbl_run1_step0",main.mostCurrent._lbl_run1_step0,"lbl_run2_step0",main.mostCurrent._lbl_run2_step0,"lbl_time_remind",main.mostCurrent._lbl_time_remind,"min1",main._min1,"pan_all_send",main.mostCurrent._pan_all_send,"phon_num",main._phon_num,"sec1",main._sec1,"Starter",Debug.moduleToString(m2ebadi.myaccunt.starter.class),"time_remind",main._time_remind};
 }
 }

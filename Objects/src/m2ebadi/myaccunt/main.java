@@ -414,6 +414,7 @@ public m2ebadi.myaccunt.httpjob _ht = null;
 public anywheresoftware.b4a.objects.LabelWrapper _lbl_time_remind = null;
 public static int _min1 = 0;
 public static int _sec1 = 0;
+public anywheresoftware.b4a.objects.LabelWrapper _lbl_run1_step0 = null;
 public m2ebadi.myaccunt.starter _starter = null;
 public m2ebadi.myaccunt.activity_step1 _activity_step1 = null;
 public m2ebadi.myaccunt.activity_step2 _activity_step2 = null;
@@ -442,38 +443,73 @@ RDebugUtils.currentLine=131080;
 _time_remind.Initialize(processBA,"time_remind",(long) (1000));
  };
 RDebugUtils.currentLine=131083;
- //BA.debugLineNum = 131083;BA.debugLine="End Sub";
+ //BA.debugLineNum = 131083;BA.debugLine="et_phonNum.Color=Colors.ARGB(0,0,0,0)";
+mostCurrent._et_phonnum.setColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (0),(int) (0),(int) (0),(int) (0)));
+RDebugUtils.currentLine=131084;
+ //BA.debugLineNum = 131084;BA.debugLine="et_code_num.Color=Colors.ARGB(0,0,0,0)";
+mostCurrent._et_code_num.setColor(anywheresoftware.b4a.keywords.Common.Colors.ARGB((int) (0),(int) (0),(int) (0),(int) (0)));
+RDebugUtils.currentLine=131086;
+ //BA.debugLineNum = 131086;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="main";
-RDebugUtils.currentLine=327680;
- //BA.debugLineNum = 327680;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=327682;
- //BA.debugLineNum = 327682;BA.debugLine="End Sub";
+RDebugUtils.currentLine=262144;
+ //BA.debugLineNum = 262144;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=262146;
+ //BA.debugLineNum = 262146;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=262144;
- //BA.debugLineNum = 262144;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=262146;
- //BA.debugLineNum = 262146;BA.debugLine="End Sub";
+RDebugUtils.currentLine=196608;
+ //BA.debugLineNum = 196608;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=196610;
+ //BA.debugLineNum = 196610;BA.debugLine="End Sub";
 return "";
 }
 public static String  _et_code_num_textchanged(String _old,String _new) throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "et_code_num_textchanged", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "et_code_num_textchanged", new Object[] {_old,_new}));}
-RDebugUtils.currentLine=655360;
- //BA.debugLineNum = 655360;BA.debugLine="Private Sub et_code_num_TextChanged (Old As String";
-RDebugUtils.currentLine=655361;
- //BA.debugLineNum = 655361;BA.debugLine="lbl_run2_step0.Enabled=True";
+RDebugUtils.currentLine=4259840;
+ //BA.debugLineNum = 4259840;BA.debugLine="Private Sub et_code_num_TextChanged (Old As String";
+RDebugUtils.currentLine=4259841;
+ //BA.debugLineNum = 4259841;BA.debugLine="If(et_code_num.Text=\"\")Then";
+if (((mostCurrent._et_code_num.getText()).equals(""))) { 
+RDebugUtils.currentLine=4259842;
+ //BA.debugLineNum = 4259842;BA.debugLine="lbl_run2_step0.Enabled=False";
+mostCurrent._lbl_run2_step0.setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ }else {
+RDebugUtils.currentLine=4259844;
+ //BA.debugLineNum = 4259844;BA.debugLine="lbl_run2_step0.Enabled=True";
 mostCurrent._lbl_run2_step0.setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=655362;
- //BA.debugLineNum = 655362;BA.debugLine="End Sub";
+ };
+RDebugUtils.currentLine=4259847;
+ //BA.debugLineNum = 4259847;BA.debugLine="End Sub";
+return "";
+}
+public static String  _et_phonnum_textchanged(String _old,String _new) throws Exception{
+RDebugUtils.currentModule="main";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "et_phonnum_textchanged", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "et_phonnum_textchanged", new Object[] {_old,_new}));}
+RDebugUtils.currentLine=4980736;
+ //BA.debugLineNum = 4980736;BA.debugLine="Private Sub et_phonNum_TextChanged (Old As String,";
+RDebugUtils.currentLine=4980737;
+ //BA.debugLineNum = 4980737;BA.debugLine="If(et_phonNum.Text=\"\")Then";
+if (((mostCurrent._et_phonnum.getText()).equals(""))) { 
+RDebugUtils.currentLine=4980738;
+ //BA.debugLineNum = 4980738;BA.debugLine="lbl_run1_step0.Enabled=False";
+mostCurrent._lbl_run1_step0.setEnabled(anywheresoftware.b4a.keywords.Common.False);
+ }else {
+RDebugUtils.currentLine=4980740;
+ //BA.debugLineNum = 4980740;BA.debugLine="lbl_run1_step0.Enabled=True";
+mostCurrent._lbl_run1_step0.setEnabled(anywheresoftware.b4a.keywords.Common.True);
+ };
+RDebugUtils.currentLine=4980742;
+ //BA.debugLineNum = 4980742;BA.debugLine="End Sub";
 return "";
 }
 public static String  _http_initial_1(int _type1) throws Exception{
@@ -481,155 +517,171 @@ RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "http_initial_1", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "http_initial_1", new Object[] {_type1}));}
 String _send = "";
-RDebugUtils.currentLine=720896;
- //BA.debugLineNum = 720896;BA.debugLine="Sub http_initial_1(type1 As Int)";
-RDebugUtils.currentLine=720898;
- //BA.debugLineNum = 720898;BA.debugLine="If(type1=1)Then";
+RDebugUtils.currentLine=4325376;
+ //BA.debugLineNum = 4325376;BA.debugLine="Sub http_initial_1(type1 As Int)";
+RDebugUtils.currentLine=4325378;
+ //BA.debugLineNum = 4325378;BA.debugLine="If(type1=1)Then";
 if ((_type1==1)) { 
-RDebugUtils.currentLine=720899;
- //BA.debugLineNum = 720899;BA.debugLine="ht.Initialize(\"ht1\",Me)";
+RDebugUtils.currentLine=4325379;
+ //BA.debugLineNum = 4325379;BA.debugLine="ht.Initialize(\"ht1\",Me)";
 mostCurrent._ht._initialize /*String*/ (null,processBA,"ht1",main.getObject());
-RDebugUtils.currentLine=720900;
- //BA.debugLineNum = 720900;BA.debugLine="Dim send As String";
+RDebugUtils.currentLine=4325380;
+ //BA.debugLineNum = 4325380;BA.debugLine="Dim send As String";
 _send = "";
-RDebugUtils.currentLine=720901;
- //BA.debugLineNum = 720901;BA.debugLine="send = \"id=1&num=\"&phon_num&\"&code=0\"";
+RDebugUtils.currentLine=4325381;
+ //BA.debugLineNum = 4325381;BA.debugLine="send = \"id=1&num=\"&phon_num&\"&code=0\"";
 _send = "id=1&num="+_phon_num+"&code=0";
-RDebugUtils.currentLine=720902;
- //BA.debugLineNum = 720902;BA.debugLine="ht.PostString(\"https://taravatgroup.ir/sms_req.p";
+RDebugUtils.currentLine=4325382;
+ //BA.debugLineNum = 4325382;BA.debugLine="ht.PostString(\"https://taravatgroup.ir/sms_req.p";
 mostCurrent._ht._poststring /*String*/ (null,"https://taravatgroup.ir/sms_req.php",_send);
  }else 
-{RDebugUtils.currentLine=720904;
- //BA.debugLineNum = 720904;BA.debugLine="Else if (type1=2)Then";
+{RDebugUtils.currentLine=4325384;
+ //BA.debugLineNum = 4325384;BA.debugLine="Else if (type1=2)Then";
 if ((_type1==2)) { 
-RDebugUtils.currentLine=720906;
- //BA.debugLineNum = 720906;BA.debugLine="ht.Initialize(\"ht2\",Me)";
+RDebugUtils.currentLine=4325386;
+ //BA.debugLineNum = 4325386;BA.debugLine="ht.Initialize(\"ht2\",Me)";
 mostCurrent._ht._initialize /*String*/ (null,processBA,"ht2",main.getObject());
-RDebugUtils.currentLine=720907;
- //BA.debugLineNum = 720907;BA.debugLine="Dim send As String";
+RDebugUtils.currentLine=4325387;
+ //BA.debugLineNum = 4325387;BA.debugLine="Dim send As String";
 _send = "";
-RDebugUtils.currentLine=720908;
- //BA.debugLineNum = 720908;BA.debugLine="send = \"id=2&num=\"&phon_num&\"&code=\"&et_code_num";
+RDebugUtils.currentLine=4325388;
+ //BA.debugLineNum = 4325388;BA.debugLine="send = \"id=2&num=\"&phon_num&\"&code=\"&et_code_num";
 _send = "id=2&num="+_phon_num+"&code="+mostCurrent._et_code_num.getText();
-RDebugUtils.currentLine=720909;
- //BA.debugLineNum = 720909;BA.debugLine="ht.PostString(\"https://taravatgroup.ir/sms_req.p";
+RDebugUtils.currentLine=4325389;
+ //BA.debugLineNum = 4325389;BA.debugLine="ht.PostString(\"https://taravatgroup.ir/sms_req.p";
 mostCurrent._ht._poststring /*String*/ (null,"https://taravatgroup.ir/sms_req.php",_send);
  }}
 ;
-RDebugUtils.currentLine=720914;
- //BA.debugLineNum = 720914;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4325394;
+ //BA.debugLineNum = 4325394;BA.debugLine="End Sub";
 return "";
 }
 public static String  _jobdone(m2ebadi.myaccunt.httpjob _job) throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "jobdone", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "jobdone", new Object[] {_job}));}
-RDebugUtils.currentLine=786432;
- //BA.debugLineNum = 786432;BA.debugLine="Sub Jobdone (job As HttpJob)";
-RDebugUtils.currentLine=786433;
- //BA.debugLineNum = 786433;BA.debugLine="If job.Success = True Then";
+RDebugUtils.currentLine=4390912;
+ //BA.debugLineNum = 4390912;BA.debugLine="Sub Jobdone (job As HttpJob)";
+RDebugUtils.currentLine=4390913;
+ //BA.debugLineNum = 4390913;BA.debugLine="If job.Success = True Then";
 if (_job._success /*boolean*/ ==anywheresoftware.b4a.keywords.Common.True) { 
-RDebugUtils.currentLine=786434;
- //BA.debugLineNum = 786434;BA.debugLine="Log(job.GetString)";
-anywheresoftware.b4a.keywords.Common.LogImpl("6786434",_job._getstring /*String*/ (null),0);
-RDebugUtils.currentLine=786435;
- //BA.debugLineNum = 786435;BA.debugLine="If job.JobName=\"ht1\" Then";
+RDebugUtils.currentLine=4390914;
+ //BA.debugLineNum = 4390914;BA.debugLine="Log(job.GetString)";
+anywheresoftware.b4a.keywords.Common.LogImpl("44390914",_job._getstring /*String*/ (null),0);
+RDebugUtils.currentLine=4390915;
+ //BA.debugLineNum = 4390915;BA.debugLine="If job.JobName=\"ht1\" Then";
 if ((_job._jobname /*String*/ ).equals("ht1")) { 
  };
-RDebugUtils.currentLine=786440;
- //BA.debugLineNum = 786440;BA.debugLine="If job.JobName=\"ht2\" Then";
+RDebugUtils.currentLine=4390920;
+ //BA.debugLineNum = 4390920;BA.debugLine="If job.JobName=\"ht2\" Then";
 if ((_job._jobname /*String*/ ).equals("ht2")) { 
-RDebugUtils.currentLine=786441;
- //BA.debugLineNum = 786441;BA.debugLine="If(job.GetString.Contains(\"okuser\")=True) Then";
+RDebugUtils.currentLine=4390921;
+ //BA.debugLineNum = 4390921;BA.debugLine="If(job.GetString.Contains(\"okuser\")=True) Then";
 if ((_job._getstring /*String*/ (null).contains("okuser")==anywheresoftware.b4a.keywords.Common.True)) { 
-RDebugUtils.currentLine=786442;
- //BA.debugLineNum = 786442;BA.debugLine="File.WriteString(File.DirInternal,\"phonNum\",ph";
+RDebugUtils.currentLine=4390922;
+ //BA.debugLineNum = 4390922;BA.debugLine="File.WriteString(File.DirInternal,\"phonNum\",ph";
 anywheresoftware.b4a.keywords.Common.File.WriteString(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"phonNum",_phon_num);
-RDebugUtils.currentLine=786443;
- //BA.debugLineNum = 786443;BA.debugLine="StartActivity(activity_step2)";
+RDebugUtils.currentLine=4390923;
+ //BA.debugLineNum = 4390923;BA.debugLine="StartActivity(activity_step2)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._activity_step2.getObject()));
  }else 
-{RDebugUtils.currentLine=786446;
- //BA.debugLineNum = 786446;BA.debugLine="Else if (job.GetString.Contains(\"nouser\")=True)";
+{RDebugUtils.currentLine=4390926;
+ //BA.debugLineNum = 4390926;BA.debugLine="Else if (job.GetString.Contains(\"nouser\")=True)";
 if ((_job._getstring /*String*/ (null).contains("nouser")==anywheresoftware.b4a.keywords.Common.True)) { 
-RDebugUtils.currentLine=786448;
- //BA.debugLineNum = 786448;BA.debugLine="File.WriteString(File.DirInternal,\"phonNum\",ph";
+RDebugUtils.currentLine=4390928;
+ //BA.debugLineNum = 4390928;BA.debugLine="File.WriteString(File.DirInternal,\"phonNum\",ph";
 anywheresoftware.b4a.keywords.Common.File.WriteString(anywheresoftware.b4a.keywords.Common.File.getDirInternal(),"phonNum",_phon_num);
-RDebugUtils.currentLine=786449;
- //BA.debugLineNum = 786449;BA.debugLine="StartActivity(activity_step1)";
+RDebugUtils.currentLine=4390929;
+ //BA.debugLineNum = 4390929;BA.debugLine="StartActivity(activity_step1)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._activity_step1.getObject()));
  }else {
-RDebugUtils.currentLine=786451;
- //BA.debugLineNum = 786451;BA.debugLine="ToastMessageShow(\"کد تائید اشتباه است\",False)";
+RDebugUtils.currentLine=4390931;
+ //BA.debugLineNum = 4390931;BA.debugLine="ToastMessageShow(\"کد تائید اشتباه است\",False)";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("کد تائید اشتباه است"),anywheresoftware.b4a.keywords.Common.False);
  }}
 ;
  };
  }else {
  };
-RDebugUtils.currentLine=786460;
- //BA.debugLineNum = 786460;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4390940;
+ //BA.debugLineNum = 4390940;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lbl_back_run1_click() throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_back_run1_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_back_run1_click", null));}
-RDebugUtils.currentLine=589824;
- //BA.debugLineNum = 589824;BA.debugLine="Private Sub lbl_back_run1_Click";
-RDebugUtils.currentLine=589829;
- //BA.debugLineNum = 589829;BA.debugLine="pan_all_send.Visible=False";
+RDebugUtils.currentLine=4194304;
+ //BA.debugLineNum = 4194304;BA.debugLine="Private Sub lbl_back_run1_Click";
+RDebugUtils.currentLine=4194309;
+ //BA.debugLineNum = 4194309;BA.debugLine="pan_all_send.Visible=False";
 mostCurrent._pan_all_send.setVisible(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=589830;
- //BA.debugLineNum = 589830;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4194310;
+ //BA.debugLineNum = 4194310;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lbl_run1_step0_click() throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_run1_step0_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_run1_step0_click", null));}
-RDebugUtils.currentLine=393216;
- //BA.debugLineNum = 393216;BA.debugLine="Private Sub lbl_run1_step0_Click";
-RDebugUtils.currentLine=393222;
- //BA.debugLineNum = 393222;BA.debugLine="phon_num=et_phonNum.Text";
+RDebugUtils.currentLine=3997696;
+ //BA.debugLineNum = 3997696;BA.debugLine="Private Sub lbl_run1_step0_Click";
+RDebugUtils.currentLine=3997700;
+ //BA.debugLineNum = 3997700;BA.debugLine="If(et_phonNum.Text=\"\")Then";
+if (((mostCurrent._et_phonnum.getText()).equals(""))) { 
+RDebugUtils.currentLine=3997701;
+ //BA.debugLineNum = 3997701;BA.debugLine="ToastMessageShow(\"شماره مبایل معتبر وارد کنید\",F";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("شماره مبایل معتبر وارد کنید"),anywheresoftware.b4a.keywords.Common.False);
+ }else {
+RDebugUtils.currentLine=3997704;
+ //BA.debugLineNum = 3997704;BA.debugLine="phon_num=et_phonNum.Text";
 _phon_num = mostCurrent._et_phonnum.getText();
-RDebugUtils.currentLine=393223;
- //BA.debugLineNum = 393223;BA.debugLine="http_initial_1(1)";
+RDebugUtils.currentLine=3997705;
+ //BA.debugLineNum = 3997705;BA.debugLine="http_initial_1(1)";
 _http_initial_1((int) (1));
-RDebugUtils.currentLine=393224;
- //BA.debugLineNum = 393224;BA.debugLine="lbl_run2_step0.Enabled=False";
+RDebugUtils.currentLine=3997706;
+ //BA.debugLineNum = 3997706;BA.debugLine="lbl_run2_step0.Enabled=False";
 mostCurrent._lbl_run2_step0.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=393225;
- //BA.debugLineNum = 393225;BA.debugLine="pan_all_send.Visible=True";
+RDebugUtils.currentLine=3997707;
+ //BA.debugLineNum = 3997707;BA.debugLine="pan_all_send.Visible=True";
 mostCurrent._pan_all_send.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=393226;
- //BA.debugLineNum = 393226;BA.debugLine="time_remind.Enabled=True";
+RDebugUtils.currentLine=3997708;
+ //BA.debugLineNum = 3997708;BA.debugLine="time_remind.Enabled=True";
 _time_remind.setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=393227;
- //BA.debugLineNum = 393227;BA.debugLine="End Sub";
+ };
+RDebugUtils.currentLine=3997712;
+ //BA.debugLineNum = 3997712;BA.debugLine="End Sub";
 return "";
 }
 public static String  _lbl_run2_step0_click() throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "lbl_run2_step0_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "lbl_run2_step0_click", null));}
-RDebugUtils.currentLine=458752;
- //BA.debugLineNum = 458752;BA.debugLine="Private Sub lbl_run2_step0_Click";
-RDebugUtils.currentLine=458755;
- //BA.debugLineNum = 458755;BA.debugLine="http_initial_1(2)";
+RDebugUtils.currentLine=4063232;
+ //BA.debugLineNum = 4063232;BA.debugLine="Private Sub lbl_run2_step0_Click";
+RDebugUtils.currentLine=4063234;
+ //BA.debugLineNum = 4063234;BA.debugLine="If(et_code_num.Text=\"\")Then";
+if (((mostCurrent._et_code_num.getText()).equals(""))) { 
+RDebugUtils.currentLine=4063235;
+ //BA.debugLineNum = 4063235;BA.debugLine="ToastMessageShow(\"کد تائید را وارد کنید\",False)";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow(BA.ObjectToCharSequence("کد تائید را وارد کنید"),anywheresoftware.b4a.keywords.Common.False);
+ }else {
+RDebugUtils.currentLine=4063237;
+ //BA.debugLineNum = 4063237;BA.debugLine="http_initial_1(2)";
 _http_initial_1((int) (2));
-RDebugUtils.currentLine=458758;
- //BA.debugLineNum = 458758;BA.debugLine="End Sub";
+ };
+RDebugUtils.currentLine=4063242;
+ //BA.debugLineNum = 4063242;BA.debugLine="End Sub";
 return "";
 }
 public static String  _pan_all_send_click() throws Exception{
 RDebugUtils.currentModule="main";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "pan_all_send_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "pan_all_send_click", null));}
-RDebugUtils.currentLine=524288;
- //BA.debugLineNum = 524288;BA.debugLine="Private Sub pan_all_send_Click";
-RDebugUtils.currentLine=524290;
- //BA.debugLineNum = 524290;BA.debugLine="End Sub";
+RDebugUtils.currentLine=4128768;
+ //BA.debugLineNum = 4128768;BA.debugLine="Private Sub pan_all_send_Click";
+RDebugUtils.currentLine=4128770;
+ //BA.debugLineNum = 4128770;BA.debugLine="End Sub";
 return "";
 }
 public static String  _time_remind_tick() throws Exception{
@@ -638,152 +690,152 @@ if (Debug.shouldDelegate(mostCurrent.activityBA, "time_remind_tick", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "time_remind_tick", null));}
 String _sec2 = "";
 String _min2 = "";
-RDebugUtils.currentLine=196608;
- //BA.debugLineNum = 196608;BA.debugLine="Sub time_remind_Tick";
-RDebugUtils.currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="If(min1<1 And sec1<1)Then";
+RDebugUtils.currentLine=3932160;
+ //BA.debugLineNum = 3932160;BA.debugLine="Sub time_remind_Tick";
+RDebugUtils.currentLine=3932162;
+ //BA.debugLineNum = 3932162;BA.debugLine="If(min1<1 And sec1<1)Then";
 if ((_min1<1 && _sec1<1)) { 
-RDebugUtils.currentLine=196611;
- //BA.debugLineNum = 196611;BA.debugLine="time_remind.Enabled=False";
+RDebugUtils.currentLine=3932163;
+ //BA.debugLineNum = 3932163;BA.debugLine="time_remind.Enabled=False";
 _time_remind.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=196612;
- //BA.debugLineNum = 196612;BA.debugLine="lbl_time_remind.Text=\"0:0\"";
+RDebugUtils.currentLine=3932164;
+ //BA.debugLineNum = 3932164;BA.debugLine="lbl_time_remind.Text=\"0:0\"";
 mostCurrent._lbl_time_remind.setText(BA.ObjectToCharSequence("0:0"));
  };
-RDebugUtils.currentLine=196615;
- //BA.debugLineNum = 196615;BA.debugLine="Dim sec2 As String=sec1";
+RDebugUtils.currentLine=3932167;
+ //BA.debugLineNum = 3932167;BA.debugLine="Dim sec2 As String=sec1";
 _sec2 = BA.NumberToString(_sec1);
-RDebugUtils.currentLine=196616;
- //BA.debugLineNum = 196616;BA.debugLine="Dim min2 As String=min1";
+RDebugUtils.currentLine=3932168;
+ //BA.debugLineNum = 3932168;BA.debugLine="Dim min2 As String=min1";
 _min2 = BA.NumberToString(_min1);
-RDebugUtils.currentLine=196617;
- //BA.debugLineNum = 196617;BA.debugLine="Select sec2";
+RDebugUtils.currentLine=3932169;
+ //BA.debugLineNum = 3932169;BA.debugLine="Select sec2";
 switch (BA.switchObjectToInt(_sec2,BA.NumberToString(0),BA.NumberToString(1),BA.NumberToString(2),BA.NumberToString(3),BA.NumberToString(4),BA.NumberToString(5),BA.NumberToString(6),BA.NumberToString(7),BA.NumberToString(8),BA.NumberToString(9))) {
 case 0: {
-RDebugUtils.currentLine=196619;
- //BA.debugLineNum = 196619;BA.debugLine="sec2=\"00\"";
+RDebugUtils.currentLine=3932171;
+ //BA.debugLineNum = 3932171;BA.debugLine="sec2=\"00\"";
 _sec2 = "00";
  break; }
 case 1: {
-RDebugUtils.currentLine=196621;
- //BA.debugLineNum = 196621;BA.debugLine="sec2=\"01\"";
+RDebugUtils.currentLine=3932173;
+ //BA.debugLineNum = 3932173;BA.debugLine="sec2=\"01\"";
 _sec2 = "01";
  break; }
 case 2: {
-RDebugUtils.currentLine=196623;
- //BA.debugLineNum = 196623;BA.debugLine="sec2=\"02\"";
+RDebugUtils.currentLine=3932175;
+ //BA.debugLineNum = 3932175;BA.debugLine="sec2=\"02\"";
 _sec2 = "02";
  break; }
 case 3: {
-RDebugUtils.currentLine=196625;
- //BA.debugLineNum = 196625;BA.debugLine="sec2=\"03\"";
+RDebugUtils.currentLine=3932177;
+ //BA.debugLineNum = 3932177;BA.debugLine="sec2=\"03\"";
 _sec2 = "03";
  break; }
 case 4: {
-RDebugUtils.currentLine=196627;
- //BA.debugLineNum = 196627;BA.debugLine="sec2=\"04\"";
+RDebugUtils.currentLine=3932179;
+ //BA.debugLineNum = 3932179;BA.debugLine="sec2=\"04\"";
 _sec2 = "04";
  break; }
 case 5: {
-RDebugUtils.currentLine=196629;
- //BA.debugLineNum = 196629;BA.debugLine="sec2=\"05\"";
+RDebugUtils.currentLine=3932181;
+ //BA.debugLineNum = 3932181;BA.debugLine="sec2=\"05\"";
 _sec2 = "05";
  break; }
 case 6: {
-RDebugUtils.currentLine=196631;
- //BA.debugLineNum = 196631;BA.debugLine="sec2=\"06\"";
+RDebugUtils.currentLine=3932183;
+ //BA.debugLineNum = 3932183;BA.debugLine="sec2=\"06\"";
 _sec2 = "06";
  break; }
 case 7: {
-RDebugUtils.currentLine=196633;
- //BA.debugLineNum = 196633;BA.debugLine="sec2=\"07\"";
+RDebugUtils.currentLine=3932185;
+ //BA.debugLineNum = 3932185;BA.debugLine="sec2=\"07\"";
 _sec2 = "07";
  break; }
 case 8: {
-RDebugUtils.currentLine=196635;
- //BA.debugLineNum = 196635;BA.debugLine="sec2=\"08\"";
+RDebugUtils.currentLine=3932187;
+ //BA.debugLineNum = 3932187;BA.debugLine="sec2=\"08\"";
 _sec2 = "08";
  break; }
 case 9: {
-RDebugUtils.currentLine=196637;
- //BA.debugLineNum = 196637;BA.debugLine="sec2=\"09\"";
+RDebugUtils.currentLine=3932189;
+ //BA.debugLineNum = 3932189;BA.debugLine="sec2=\"09\"";
 _sec2 = "09";
  break; }
 }
 ;
-RDebugUtils.currentLine=196639;
- //BA.debugLineNum = 196639;BA.debugLine="Select min2";
+RDebugUtils.currentLine=3932191;
+ //BA.debugLineNum = 3932191;BA.debugLine="Select min2";
 switch (BA.switchObjectToInt(_min2,BA.NumberToString(0),BA.NumberToString(1),BA.NumberToString(2),BA.NumberToString(3),BA.NumberToString(4),BA.NumberToString(5),BA.NumberToString(6),BA.NumberToString(7),BA.NumberToString(8),BA.NumberToString(9))) {
 case 0: {
-RDebugUtils.currentLine=196641;
- //BA.debugLineNum = 196641;BA.debugLine="min2=\"00\"";
+RDebugUtils.currentLine=3932193;
+ //BA.debugLineNum = 3932193;BA.debugLine="min2=\"00\"";
 _min2 = "00";
  break; }
 case 1: {
-RDebugUtils.currentLine=196643;
- //BA.debugLineNum = 196643;BA.debugLine="min2=\"01\"";
+RDebugUtils.currentLine=3932195;
+ //BA.debugLineNum = 3932195;BA.debugLine="min2=\"01\"";
 _min2 = "01";
  break; }
 case 2: {
-RDebugUtils.currentLine=196645;
- //BA.debugLineNum = 196645;BA.debugLine="min2=\"02\"";
+RDebugUtils.currentLine=3932197;
+ //BA.debugLineNum = 3932197;BA.debugLine="min2=\"02\"";
 _min2 = "02";
  break; }
 case 3: {
-RDebugUtils.currentLine=196647;
- //BA.debugLineNum = 196647;BA.debugLine="min2=\"03\"";
+RDebugUtils.currentLine=3932199;
+ //BA.debugLineNum = 3932199;BA.debugLine="min2=\"03\"";
 _min2 = "03";
  break; }
 case 4: {
-RDebugUtils.currentLine=196649;
- //BA.debugLineNum = 196649;BA.debugLine="min2=\"04\"";
+RDebugUtils.currentLine=3932201;
+ //BA.debugLineNum = 3932201;BA.debugLine="min2=\"04\"";
 _min2 = "04";
  break; }
 case 5: {
-RDebugUtils.currentLine=196651;
- //BA.debugLineNum = 196651;BA.debugLine="min2=\"05\"";
+RDebugUtils.currentLine=3932203;
+ //BA.debugLineNum = 3932203;BA.debugLine="min2=\"05\"";
 _min2 = "05";
  break; }
 case 6: {
-RDebugUtils.currentLine=196653;
- //BA.debugLineNum = 196653;BA.debugLine="min2=\"06\"";
+RDebugUtils.currentLine=3932205;
+ //BA.debugLineNum = 3932205;BA.debugLine="min2=\"06\"";
 _min2 = "06";
  break; }
 case 7: {
-RDebugUtils.currentLine=196655;
- //BA.debugLineNum = 196655;BA.debugLine="min2=\"07\"";
+RDebugUtils.currentLine=3932207;
+ //BA.debugLineNum = 3932207;BA.debugLine="min2=\"07\"";
 _min2 = "07";
  break; }
 case 8: {
-RDebugUtils.currentLine=196657;
- //BA.debugLineNum = 196657;BA.debugLine="min2=\"08\"";
+RDebugUtils.currentLine=3932209;
+ //BA.debugLineNum = 3932209;BA.debugLine="min2=\"08\"";
 _min2 = "08";
  break; }
 case 9: {
-RDebugUtils.currentLine=196659;
- //BA.debugLineNum = 196659;BA.debugLine="min2=\"09\"";
+RDebugUtils.currentLine=3932211;
+ //BA.debugLineNum = 3932211;BA.debugLine="min2=\"09\"";
 _min2 = "09";
  break; }
 }
 ;
-RDebugUtils.currentLine=196662;
- //BA.debugLineNum = 196662;BA.debugLine="lbl_time_remind.Text=min2&\":\"&sec2";
+RDebugUtils.currentLine=3932214;
+ //BA.debugLineNum = 3932214;BA.debugLine="lbl_time_remind.Text=min2&\":\"&sec2";
 mostCurrent._lbl_time_remind.setText(BA.ObjectToCharSequence(_min2+":"+_sec2));
-RDebugUtils.currentLine=196664;
- //BA.debugLineNum = 196664;BA.debugLine="If(sec1<1)Then";
+RDebugUtils.currentLine=3932216;
+ //BA.debugLineNum = 3932216;BA.debugLine="If(sec1<1)Then";
 if ((_sec1<1)) { 
-RDebugUtils.currentLine=196665;
- //BA.debugLineNum = 196665;BA.debugLine="min1=min1-1";
+RDebugUtils.currentLine=3932217;
+ //BA.debugLineNum = 3932217;BA.debugLine="min1=min1-1";
 _min1 = (int) (_min1-1);
-RDebugUtils.currentLine=196666;
- //BA.debugLineNum = 196666;BA.debugLine="sec1=60";
+RDebugUtils.currentLine=3932218;
+ //BA.debugLineNum = 3932218;BA.debugLine="sec1=60";
 _sec1 = (int) (60);
  };
-RDebugUtils.currentLine=196669;
- //BA.debugLineNum = 196669;BA.debugLine="sec1=sec1-1";
+RDebugUtils.currentLine=3932221;
+ //BA.debugLineNum = 3932221;BA.debugLine="sec1=sec1-1";
 _sec1 = (int) (_sec1-1);
-RDebugUtils.currentLine=196670;
- //BA.debugLineNum = 196670;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3932222;
+ //BA.debugLineNum = 3932222;BA.debugLine="End Sub";
 return "";
 }
 }

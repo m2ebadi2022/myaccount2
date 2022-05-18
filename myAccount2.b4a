@@ -53,6 +53,7 @@ Sub Globals
 	Dim min1 As Int=14
 	Dim sec1 As Int=59
 	
+	Private lbl_run1_step0 As Label
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -65,6 +66,9 @@ Sub Activity_Create(FirstTime As Boolean)
 		Activity.LoadLayout("step0")
 		time_remind.Initialize("time_remind",1000)
 	End If
+	
+	et_phonNum.Color=Colors.ARGB(0,0,0,0)
+	et_code_num.Color=Colors.ARGB(0,0,0,0)
 	
 End Sub
 Sub time_remind_Tick
@@ -144,19 +148,28 @@ Private Sub lbl_run1_step0_Click
 	'' ارسال شماره تلفن
 	'StartActivity(activity_step2) for test
 	
+	If(et_phonNum.Text="")Then
+		ToastMessageShow("شماره مبایل معتبر وارد کنید",False)
+		
+	Else
+		phon_num=et_phonNum.Text
+		http_initial_1(1)
+		lbl_run2_step0.Enabled=False
+		pan_all_send.Visible=True
+		time_remind.Enabled=True		
+	End If
 	
 	
-	phon_num=et_phonNum.Text
-	http_initial_1(1)
-	lbl_run2_step0.Enabled=False
-	pan_all_send.Visible=True
-	time_remind.Enabled=True
 End Sub
 
 Private Sub lbl_run2_step0_Click
 	'' ارسال کد و چک درستی آن
-
-	http_initial_1(2)
+If(et_code_num.Text="")Then
+		ToastMessageShow("کد تائید را وارد کنید",False)
+Else
+		http_initial_1(2)
+End If
+	
 
 
 End Sub
@@ -175,7 +188,12 @@ Private Sub lbl_back_run1_Click
 End Sub
 
 Private Sub et_code_num_TextChanged (Old As String, New As String)
-	lbl_run2_step0.Enabled=True
+	If(et_code_num.Text="")Then
+		lbl_run2_step0.Enabled=False
+	Else
+		lbl_run2_step0.Enabled=True
+	End If
+	
 End Sub
 
 
@@ -233,3 +251,12 @@ Sub Jobdone (job As HttpJob)
 End Sub
 
 
+
+
+Private Sub et_phonNum_TextChanged (Old As String, New As String)
+	If(et_phonNum.Text="")Then
+		lbl_run1_step0.Enabled=False
+	Else
+		lbl_run1_step0.Enabled=True
+	End If
+End Sub
