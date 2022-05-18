@@ -21,8 +21,8 @@ Version=11.5
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: my account
-	#VersionCode: 2
-	#VersionName: v2
+	#VersionCode: 3
+	#VersionName: v3
 	'SupportedOrientations possible values: unspecified, landscape or portrait.
 	#SupportedOrientations: unspecified
 	#CanInstallToExternalStorage: False

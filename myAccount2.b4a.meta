@@ -10,6 +10,6 @@ ModuleClosedNodes0=
 ModuleClosedNodes1=
 ModuleClosedNodes2=
 ModuleClosedNodes3=1
-NavigationStack=activity_step1,lbl_run_step1_Click,42,0,activity_step1,Activity_Create,26,6,Main,lbl_run2_step0_Click,137,0,Main,Jobdone,199,0,activity_step2,Activity_Pause,33,0,Main,Process_Globals,20,0,Main,Globals,25,0,Main,Activity_Create,47,4,Main,time_remind_Tick,51,2,activity_step2,Activity_Create,29,6
+NavigationStack=activity_step1,lbl_run_step1_Click,42,0,activity_step1,Activity_Create,26,6,Main,lbl_run2_step0_Click,137,0,Main,Jobdone,199,0,activity_step2,Activity_Pause,33,0,Main,Process_Globals,20,0,Main,Globals,25,0,Main,Activity_Create,47,4,activity_step2,Activity_Create,29,6,Main,time_remind_Tick,51,2,activity_step1,http_initial_1,54,0
 SelectedBuild=1
 VisibleModules=3,1,2
